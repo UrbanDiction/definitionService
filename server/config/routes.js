@@ -13,6 +13,6 @@ module.exports = app => {
   app.post("/definition/word", postWordData); // change to post request?
   app.put("/definition/downvote", putIncrementDownvoteDefinition);
   app.put("/definition/upvote", putIncrementUpvoteDefinition);
-  app.get("/activity/word", getVisitsForWord);
-  app.post("/activity/word", postIncrementVisitsToWord);
+  app.post("/activity/word/getVisits", getVisitsForWord);
+  app.post("/activity/word/incrementVisit", postIncrementVisitsToWord);
 };
