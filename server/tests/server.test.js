@@ -55,7 +55,7 @@ describe("Server tests", () => {
 
   it("should respond to a get request to /definition/word with all data", done => {
     request
-      .get("/definition/word")
+      .post("/definition/word")
       .send({ word: "test" })
       .set("Accept", "application/json")
       .expect("Content-Type", /json/)
