@@ -5,12 +5,19 @@ import DownvoteButton from "./DownvoteButton.jsx";
 
 class VoteButtonContainer extends React.Component {
   constructor() {
-    super()
+    super();
   }
   render() {
     return (
-      <div>ContainerTest</div>
-    )
+      <div>
+        <div>
+          <UpvoteButton />
+        </div>
+        <div>
+          <DownvoteButton />
+        </div>
+      </div>
+    );
   }
 }
 

@@ -7,7 +7,7 @@ class DownvoteButton extends React.Component {
   }
   render() {
     return (
-      <div></div>
+      <div>DownVoteTest</div>
     )
   }
 }

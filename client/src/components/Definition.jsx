@@ -1,5 +1,6 @@
 /* eslint-disable */
 import React from "react"; // eslint-disable-line
+import VoteButtonContainer from "./VoteButtonContainer.jsx"
 
 class Definition extends React.Component {
   constructor(props) {
@@ -12,7 +13,9 @@ class Definition extends React.Component {
   }
   render() {
     return (
-      <div>Test</div>
+      <div>
+        <VoteButtonContainer />
+      </div>
     )
   }
 }
