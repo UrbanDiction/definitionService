@@ -1,5 +1,6 @@
-/* eslint-disable no-console */
+/* eslint-disable */
 import React from "react";
+import Definition from "./components/Definition.jsx";
 
 const fetch = require("node-fetch");
 
@@ -23,7 +24,11 @@ class App extends React.Component {
   }
   // eslint-disable-next-line
   render() {
-    return <div>React loaded!!!!</div>;
+    return (
+      <div>
+        <Definition />
+      </div>
+    );
   }
 }
 
