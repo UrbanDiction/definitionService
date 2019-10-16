@@ -14,10 +14,10 @@ class VoteButtonContainer extends React.Component {
     return (
       <div>
         <div>
-          <UpvoteButton upvotes={this.props.upvotes} />
+          <UpvoteButton upvotes={this.props.upvotes} toggled={this.state.buttonToggle} />
         </div>
         <div>
-          <DownvoteButton downvotes={this.props.downvotes} />
+          <DownvoteButton downvotes={this.props.downvotes} toggled={this.state.buttonToggle} />
         </div>
       </div>
     );

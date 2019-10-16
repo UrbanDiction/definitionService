@@ -2,12 +2,16 @@
 import React from "react";
 
 class UpvoteButton extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {
+      upvotes: this.props.upvotes,
+      toggled: this.props.toggled
+    }
   }
   render() {
     return (
-      <div>UpvoteTest</div>
+      <div>{this.state.upvotes}</div>
     )
   }
 }

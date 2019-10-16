@@ -4,8 +4,9 @@ import Definition from "./Definition.jsx";
 
 const DefinitionList = props => {
   const definitions = props.data.map((item, key) => {
-    <Definition key={key} data={item} />;
+    return <Definition key={key} data={item} />;
   });
+  console.log(definitions);
   return <div>{definitions}</div>;
 };
 

@@ -6,15 +6,15 @@ class Definition extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      createdBy: this.props.created_by,
-      createdDate: this.props.created_date,
-      definition: this.props.definition,
-      example: this.props.example,
-      upVotes: this.props.upvotes,
-      downVotes: this.props.downvotes,
-      hashtags: this.props.hash_tags,
-      id: this.props.id,
-      word_id: this.props.word_id
+      createdBy: this.props.data.created_by,
+      createdDate: this.props.data.created_date,
+      definition: this.props.data.definition,
+      example: this.props.data.example,
+      upVotes: this.props.data.upvotes,
+      downVotes: this.props.data.downvotes,
+      hashtags: this.props.data.hash_tags,
+      id: this.props.data.id,
+      word_id: this.props.data.word_id
     };
   }
   render() {

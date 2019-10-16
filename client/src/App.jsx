@@ -26,7 +26,6 @@ class App extends React.Component {
       })
       .then(({ definitionQuery }) => {
         this.setState({ data: definitionQuery });
-        console.log(definitionQuery);
       });
   }
   // eslint-disable-next-line
