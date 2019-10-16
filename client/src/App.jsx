@@ -1,10 +1,16 @@
 /* eslint-disable */
 import React from "react";
-import Definition from "./components/Definition.jsx";
+import DefinitionList from "./components/DefinitionList.jsx";
 
 const fetch = require("node-fetch");
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      data: []
+    };
+  }
   // eslint-disable-next-line class-methods-use-this
   componentDidMount() {
     fetch("/definition/word", {
@@ -19,14 +25,15 @@ class App extends React.Component {
         return data.json();
       })
       .then(({ definitionQuery }) => {
-        console.log(definitionQuery[0].definition);
+        this.setState({ data: definitionQuery });
+        console.log(definitionQuery);
       });
   }
   // eslint-disable-next-line
   render() {
     return (
       <div>
-        <Definition />
+        <DefinitionList data={this.state.data} />
       </div>
     );
   }

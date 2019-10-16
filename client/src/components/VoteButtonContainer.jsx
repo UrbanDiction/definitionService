@@ -4,17 +4,20 @@ import UpvoteButton from "./UpvoteButton.jsx";
 import DownvoteButton from "./DownvoteButton.jsx";
 
 class VoteButtonContainer extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
+    this.state = {
+      buttonToggle: "none"
+    }
   }
   render() {
     return (
       <div>
         <div>
-          <UpvoteButton />
+          <UpvoteButton upvotes={this.props.upvotes} />
         </div>
         <div>
-          <DownvoteButton />
+          <DownvoteButton downvotes={this.props.downvotes} />
         </div>
       </div>
     );
