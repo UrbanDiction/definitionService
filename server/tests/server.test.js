@@ -24,10 +24,10 @@ describe("Server tests", () => {
                                 `INSERT INTO words(word) VALUES ('test')`,
                                 () => {
                                   connection.query(
-                                    `INSERT INTO definitions(definition, created_date, created_by, upvotes, downvotes, word_id) VALUES ('test def', "2017-08-02", "Nick", 1, 1, 1)`,
+                                    `INSERT INTO definitions(definition, example, hash_tags, created_date, created_by, upvotes, downvotes, word_id) VALUES ('test def', 'test example', '#test', "2017-08-02", "Nick", 1, 1, 1)`,
                                     () => {
                                       connection.query(
-                                        `INSERT INTO visits(date, word_id) VALUES('test date', 1)`,
+                                        `INSERT INTO visits(date, word_id) VALUES('2012-07-01', 1)`,
                                         done
                                       );
                                     }
@@ -48,10 +48,12 @@ describe("Server tests", () => {
       }
     );
   });
+
   // afterEach(() => {
   //   connection.end();
   // });
-  it("should respond to a get request to /definition/word with all data", done => {
+
+  it("should respond to a post request to /definition/word with all data", done => {
     request
       .post("/definition/word")
       .send({ word: "test" })
@@ -62,6 +64,8 @@ describe("Server tests", () => {
           {
             id: 1,
             definition: "test def",
+            example: "test example",
+            hash_tags: "#test",
             created_date: "2017-08-02",
             created_by: "Nick",
             upvotes: 1,
@@ -71,7 +75,7 @@ describe("Server tests", () => {
         ],
         visitsQuery: [
           {
-            date: "test date"
+            date: "2012-07-01"
           }
         ]
       })
@@ -84,6 +88,7 @@ describe("Server tests", () => {
         done();
       });
   });
+
   it("should increment downvotes when put to /definition/downvote", done => {
     request
       .put("/definition/downvote")
@@ -104,6 +109,7 @@ describe("Server tests", () => {
         return done();
       });
   });
+
   it("should increment upvotes when put to /definition/upvote", done => {
     request
       .put("/definition/upvote")
@@ -124,13 +130,14 @@ describe("Server tests", () => {
         return done();
       });
   });
-  it("should respond with visits data to word when get to /activity/word", done => {
+
+  it("should respond with visits data to word when post to /activity/word/getVisits", done => {
     request
       .post("/activity/word/getVisits")
       .send({ word: "test" })
       .set("Accept", "application/json")
       .expect("Content-Type", /json/)
-      .expect({ visitsQuery: [{ id: 1, date: "test date", word_id: 1 }] })
+      .expect({ visitsQuery: [{ id: 1, date: "2012-07-01", word_id: 1 }] })
       .end(err => {
         if (err) {
           return done(err);
@@ -138,7 +145,8 @@ describe("Server tests", () => {
         return done();
       });
   });
-  it("should add a visit to a word when post to /activity/word", done => {
+
+  it("should add a visit to a word when post to /activity/word/incrementVisit", done => {
     request
       .post("/activity/word/incrementVisit")
       .send({ word: "test" })

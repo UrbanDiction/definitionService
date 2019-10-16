@@ -1,6 +1,6 @@
 /*  Execute this file from the command line by typing:
  *    mysql -u <USER> < schema.sql
- *    OR:
+ *    OR
  *    mysql -u <USER> -p < schema.sql
  *  For example, on a pairing station, it'll be
  *    mysql -u student -p < schema.sql
@@ -33,6 +33,8 @@ CREATE TABLE visits (
 CREATE TABLE definitions (
   id int NOT NULL AUTO_INCREMENT,
   definition varchar(500),
+  example varchar(500),
+  hash_tags varchar(500),
   created_date varchar(150),
   created_by varchar(30),
   upvotes int,
