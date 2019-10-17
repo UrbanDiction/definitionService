@@ -30,15 +30,3 @@ class Definition extends React.Component {
 }
 
 export default Definition;
-
-/*
-created_by: "Nick"
-created_date: "2017-08-02"
-definition: "test def"
-downvotes: 1
-example: "test example"
-hash_tags: "#test"
-id: 1
-upvotes: 1
-word_id: 1
-*/

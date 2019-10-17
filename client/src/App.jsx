@@ -15,7 +15,7 @@ class App extends React.Component {
   componentDidMount() {
     fetch("/definition/word", {
       method: "POST",
-      body: JSON.stringify({ word: "test" }),
+      body: JSON.stringify({ word: "architecto" }),
       headers: {
         "Content-Type": "application/json"
       }
@@ -32,7 +32,10 @@ class App extends React.Component {
   render() {
     return (
       <div>
+      <div className="def-count">top definition</div>
+      <div>
         <DefinitionList data={this.state.data} />
+      </div>
       </div>
     );
   }

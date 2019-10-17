@@ -1,0 +1,10 @@
+.def-count {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.8125rem;
+  display: inline;
+  vertical-align: super;
+  background-color: #efff00;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
