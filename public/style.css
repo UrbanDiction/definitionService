@@ -9,7 +9,7 @@
     sans-serif;
 }
 
-.word-title {
+.word_title {
   color: #134fe6;
   font-size: 2rem;
   font-weight: bold;
@@ -42,4 +42,45 @@
 .defs {
   padding-left: 32px;
   padding-top: 32px;
+  width: 66.66667%;
+}
+
+.single_def {
+  margin-top: 1em;
+}
+
+.tone {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -2em;
+  margin-right: -2em;
+  padding-left: 2em;
+  padding-right: 3em;
+  background-color: #efff00;
+  height: 72px;
+  width: 75%;
+  padding-left: 32px;
+  padding-top: 32px;
+}
+
+.mug-image {
+  height: 91px;
+  width: 125px;
+}
+
+.mug-text {
+  padding-bottom: 28px;
+  align-items: left;
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+}
+
+.mug-word {
+  color: #efff00;
+  background-color: black;
+  padding: 1px 3px;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
 }
