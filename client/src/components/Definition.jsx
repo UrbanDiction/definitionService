@@ -39,7 +39,7 @@ class Definition extends React.Component {
             downvotes={this.state.downVotes}
           />
         </div>
-        <div>
+        <div className="author-date">
           by <span className="author">{this.state.createdBy}</span>{" "}
           {this.state.createdDate}
         </div>
