@@ -2,6 +2,7 @@
 import React from "react";
 import UpvoteButton from "./UpvoteButton.jsx";
 import DownvoteButton from "./DownvoteButton.jsx";
+import { Button, ButtonGroup } from 'reactstrap';
 
 class VoteButtonContainer extends React.Component {
   constructor(props) {
@@ -10,9 +11,10 @@ class VoteButtonContainer extends React.Component {
       buttonToggle: "none"
     }
   }
+
   render() {
     return (
-      <div className="buttonWrap">
+      <div className="btn-group" role="group" aria-label="upvote-downvote">
         <div>
           <UpvoteButton upvotes={this.props.upvotes} toggled={this.state.buttonToggle} />
         </div>

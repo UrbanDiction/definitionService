@@ -139,7 +139,7 @@
   margin-left: 5px;
 }
 
-.buttonWrap {
+.btn-group {
   display: flex;
   flex-direction: row;
 }
