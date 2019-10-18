@@ -5,6 +5,41 @@
   display: inline;
   vertical-align: super;
   background-color: #efff00;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
+    sans-serif;
 }
 
+.word-title {
+  color: #134fe6;
+  font-size: 2rem;
+  font-weight: bold;
+  line-height: 129%;
+  text-decoration: none;
+  vertical-align: middle;
+  font-family: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.example {
+  font-style: italic;
+}
+
+.hash {
+  color: #134fe6;
+}
+
+.hash_green:hover {
+  color: lime;
+}
+
+.author {
+  color: #134fe6;
+}
+
+.author:hover {
+  color: lime;
+}
+
+.defs {
+  padding-left: 32px;
+  padding-top: 32px;
+}

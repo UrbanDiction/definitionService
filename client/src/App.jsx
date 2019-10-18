@@ -32,7 +32,8 @@ class App extends React.Component {
   render() {
     return (
       <div>
-      <div className="def-count">top definition</div>
+
+
       <div>
         <DefinitionList data={this.state.data} />
       </div>

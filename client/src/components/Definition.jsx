@@ -18,12 +18,25 @@ class Definition extends React.Component {
     };
   }
   render() {
+    console.log(this.props.def_id)
+    const hashed = this.state.hashtags.split(" ").map(item => <span className="hash_green">{"#" + item + " "}</span>);
     return (
-      <div>
+      <div className="defs">
+
+        {this.props.def_id === 1 ? <div className="def-count">top definition</div> : <div className="def-count">{this.props.def_id}</div>}
+        <div className="word-title">Word</div>
+        <p>{this.state.definition}</p>
+        <p className="example">{this.state.example}</p>
+        <div className="hash">{hashed}</div>
+        <div className="buttonContainer">
         <VoteButtonContainer
           upvotes={this.state.upVotes}
           downvotes={this.state.downVotes}
         />
+        </div>
+        <div>
+          by <span className="author">{this.state.createdBy}</span> {this.state.createdDate}
+        </div>
       </div>
     );
   }
