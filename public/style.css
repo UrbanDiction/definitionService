@@ -29,7 +29,7 @@
 }
 
 .hash_green:hover {
-  color: lime;
+  color: #05ff56;
 }
 
 .author {
@@ -38,11 +38,15 @@
 }
 
 .author-date {
+  margin-top: 10px;
+  margin-bottom: 25px;
   font-weight: bold;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
+    sans-serif;
 }
 
 .author:hover {
-  color: lime;
+  color: #05ff56;
 }
 
 .defs {
@@ -85,12 +89,62 @@
   color: black;
   font-size: 18px;
   font-weight: bold;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
+    sans-serif;
 }
 
 .mug-word {
   color: #efff00;
   background-color: black;
   padding: 1px 3px;
-  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
+    sans-serif;
+}
+
+.upvote-wrapper {
+  height: 2.5rem;
+  width: 75px;
+  border-radius: 20px 0px 0px 20px;
+  border: 1px solid black;
+  box-shadow: 0 2px 0 black;
+  text-align: center;
+}
+
+.upvote-wrapper:hover {
+  background-color: #05ff56;
+}
+
+.downvote-wrapper {
+  height: 2.5rem;
+  width: 75px;
+  border-radius: 0px 20px 20px 0px;
+  border: 1px solid black;
+  box-shadow: 0 2px 0 black;
+  text-align: center;
+}
+
+.downvote-wrapper:hover {
+  background-color: #05ff56;
+}
+
+.upvote-img {
+  max-height: 15px !important;
+  max-width: 15px !important;
+  margin-left: 5px;
+}
+
+.downvote-img {
+  max-height: 15px !important;
+  max-width: 15px !important;
+  margin-left: 5px;
+}
+
+.buttonWrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.clicked {
+  background-color: #05ff56;
+  box-shadow: none;
 }

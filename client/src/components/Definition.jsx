@@ -33,18 +33,22 @@ class Definition extends React.Component {
         <p className="single_def">{this.state.definition}</p>
         <p className="example">{this.state.example}</p>
         <div className="hash">{hashed}</div>
+
+        <div className="author-date">
+          by <span className="author">{this.state.createdBy}</span>{" "}
+          {this.state.createdDate}
+        </div>
         <div className="buttonContainer">
           <VoteButtonContainer
             upvotes={this.state.upVotes}
             downvotes={this.state.downVotes}
           />
         </div>
-        <div className="author-date">
-          by <span className="author">{this.state.createdBy}</span>{" "}
-          {this.state.createdDate}
-        </div>
         <div className="tone">
-          <div className="mug-text">Get a <span className="mug-word">Word</span> mug for your cousin Steve.</div>
+          <div className="mug-text">
+            Get a <span className="mug-word">Word</span> mug for your cousin
+            Steve.
+          </div>
           <div>
             <img
               className="mug-image"

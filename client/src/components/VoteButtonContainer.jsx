@@ -12,7 +12,7 @@ class VoteButtonContainer extends React.Component {
   }
   render() {
     return (
-      <div>
+      <div className="buttonWrap">
         <div>
           <UpvoteButton upvotes={this.props.upvotes} toggled={this.state.buttonToggle} />
         </div>
