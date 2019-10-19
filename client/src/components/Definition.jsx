@@ -2,6 +2,7 @@
 import React from "react"; // eslint-disable-line
 import VoteButtonContainer from "./VoteButtonContainer.jsx";
 import SocialMedia from "./SocialMedia.jsx";
+import FlagButton from "./FlagButton.jsx";
 
 class Definition extends React.Component {
   constructor(props) {
@@ -48,7 +49,9 @@ class Definition extends React.Component {
             downvotes={this.state.downVotes}
           />
           <div className="flag-elip">
-            <div className="flag-button">f</div>
+            <div className="flag-button">
+              <FlagButton />
+            </div>
             <div className="elip-button">...</div>
           </div>
         </div>

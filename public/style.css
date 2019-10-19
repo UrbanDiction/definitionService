@@ -253,3 +253,15 @@
   font-weight: bold;
   font-size: 0.7125rem;
 }
+
+.svg-twitter:hover {
+  fill: lime;
+}
+
+.svg-facebook:hover {
+  fill: lime;
+}
+
+.svg-share:hover {
+  fill: lime;
+}
