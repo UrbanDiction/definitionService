@@ -1,6 +1,7 @@
 /* eslint-disable */
 import React from "react"; // eslint-disable-line
 import VoteButtonContainer from "./VoteButtonContainer.jsx";
+import SocialMedia from "./SocialMedia.jsx";
 
 class Definition extends React.Component {
   constructor(props) {
@@ -24,11 +25,14 @@ class Definition extends React.Component {
       .map(item => <span className="hash_green">{"#" + item + " "}</span>);
     return (
       <div className="defs">
-        {this.props.def_id === 1 ? (
-          <div className="def-count">top definition</div>
-        ) : (
-          <div className="def-count">{this.props.def_id}</div>
-        )}
+        <div className="top-row">
+          {this.props.def_id === 1 ? (
+            <div className="def-count">top definition</div>
+          ) : (
+            <div className="def-count">{this.props.def_id}</div>
+          )}
+          <SocialMedia />
+        </div>
         <div className="word_title">Word</div>
         <p className="single_def">{this.state.definition}</p>
         <p className="example">{this.state.example}</p>
@@ -38,11 +42,16 @@ class Definition extends React.Component {
           by <span className="author">{this.state.createdBy}</span>{" "}
           {this.state.createdDate}
         </div>
-        <div className="buttonContainer">
-          <VoteButtonContainer
-            upvotes={this.state.upVotes}
-            downvotes={this.state.downVotes}
-          />
+        <div className="buttonRow">
+          <div className="buttonContainer">
+            <VoteButtonContainer
+              upvotes={this.state.upVotes}
+              downvotes={this.state.downVotes}
+            />
+          </div>
+          <div className="flag-button">f
+          </div>
+          <div className="elip-button">...</div>
         </div>
         <div className="tone">
           <div className="mug-text">

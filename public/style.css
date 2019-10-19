@@ -1,7 +1,7 @@
 .def-count {
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 0.8125rem;
+  font-size: 0.7425rem;
   display: inline;
   vertical-align: super;
   background-color: #efff00;
@@ -17,6 +17,7 @@
   text-decoration: none;
   vertical-align: middle;
   font-family: "Lora", Georgia, Cambria, "Times New Roman", Times, serif;
+  cursor: pointer;
 }
 
 .example {
@@ -108,6 +109,9 @@
   border: 1px solid black;
   box-shadow: 0 2px 0 black;
   text-align: center;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
+    sans-serif;
+  cursor: pointer;
 }
 
 .upvote-wrapper:hover {
@@ -121,6 +125,9 @@
   border: 1px solid black;
   box-shadow: 0 2px 0 black;
   text-align: center;
+  font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
+    sans-serif;
+  cursor: pointer;
 }
 
 .downvote-wrapper:hover {
@@ -147,4 +154,50 @@
 .clicked {
   background-color: #05ff56;
   box-shadow: none;
+}
+
+.top-row {
+}
+
+.social-media {
+  margin-left: 80%;
+}
+
+.twitter,
+.facebook,
+.social-media {
+  max-width: 16px;
+  cursor: pointer;
+}
+
+.twitter:hover {
+  color: #05ff56;
+}
+
+.flag-button {
+  box-shadow: 0 2px 0 black;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px #000 solid;
+  height: 2.5rem;
+  padding-top: 0.5rem;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  width: 2.5rem;
+  line-height: 1.3125rem;
+}
+
+.elip-button {
+  box-shadow: 0 2px 0 black;
+  border-radius: 20px;
+  text-align: center;
+  border: 1px #000 solid;
+  height: 2.5rem;
+  padding-top: 0.5rem;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  width: 2.5rem;
+  line-height: 1.3125rem;
 }

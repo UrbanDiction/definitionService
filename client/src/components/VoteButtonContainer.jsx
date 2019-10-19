@@ -14,7 +14,7 @@ class VoteButtonContainer extends React.Component {
 
   render() {
     return (
-      <div className="btn-group" role="group" aria-label="upvote-downvote">
+      <div className="btn-group">
         <div>
           <UpvoteButton upvotes={this.props.upvotes} toggled={this.state.buttonToggle} />
         </div>
