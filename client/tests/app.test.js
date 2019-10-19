@@ -1,7 +1,7 @@
-// eslint-disable-next-line
+/* eslint-disable */
 import React from "react";
-// eslint-disable-next-line
 import { shallow, mount } from "enzyme";
+import renderer from "react-test-renderer";
 import App from "../src/App.jsx";
 
 it("works", () => {
