@@ -30,7 +30,9 @@ class UpvoteButton extends React.Component {
           </svg>
         </i>
         </div>
+        <div className="upvotes">
         {this.state.upvotes}
+        </div>
       </div>
     );
   }

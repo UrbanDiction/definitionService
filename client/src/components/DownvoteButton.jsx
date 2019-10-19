@@ -31,7 +31,9 @@ class DownvoteButton extends React.Component {
             </svg>
           </i>
         </div>
+        <div className="downvotes">
         {this.state.downvotes}
+        </div>
       </div>
     );
   }

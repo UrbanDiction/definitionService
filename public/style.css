@@ -2,11 +2,11 @@
   text-transform: uppercase;
   font-weight: bold;
   font-size: 0.7425rem;
-  display: inline;
   vertical-align: super;
   background-color: #efff00;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
     sans-serif;
+  height: 0%;
 }
 
 .word_title {
@@ -104,7 +104,7 @@
 
 .upvote-wrapper {
   height: 2.5rem;
-  width: 75px;
+  width: 100%;
   border-radius: 20px 0px 0px 20px;
   border: 1px solid black;
   box-shadow: 0 2px 0 black;
@@ -112,6 +112,10 @@
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
     sans-serif;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .upvote-wrapper:hover {
@@ -120,7 +124,7 @@
 
 .downvote-wrapper {
   height: 2.5rem;
-  width: 75px;
+  width: 100%;
   border-radius: 0px 20px 20px 0px;
   border: 1px solid black;
   box-shadow: 0 2px 0 black;
@@ -128,6 +132,10 @@
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
     sans-serif;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
 .downvote-wrapper:hover {
@@ -135,15 +143,19 @@
 }
 
 .upvote-img {
-  max-height: 15px !important;
-  max-width: 15px !important;
-  margin-left: 5px;
+  height: 16px !important;
+  width: 16px !important;
+  margin-left: 15px;
+  margin-bottom: 12px;
+  margin-right: 5px;
 }
 
 .downvote-img {
-  max-height: 15px !important;
-  max-width: 15px !important;
-  margin-left: 5px;
+  height: 16px !important;
+  width: 16px !important;
+  margin-left: 8px;
+  margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .btn-group {
@@ -157,17 +169,24 @@
 }
 
 .top-row {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 85%;
 }
 
 .social-media {
-  margin-left: 80%;
+  display: flex;
+  flex-flow: row;
 }
 
 .twitter,
 .facebook,
-.social-media {
-  max-width: 16px;
+.share {
+  width: 16px;
   cursor: pointer;
+  margin-left: 7px;
+  margin-right: 7px;
 }
 
 .twitter:hover {
@@ -188,6 +207,10 @@
   line-height: 1.3125rem;
 }
 
+.flag-button:hover {
+  background-color: #05ff56;
+}
+
 .elip-button {
   box-shadow: 0 2px 0 black;
   border-radius: 20px;
@@ -200,4 +223,33 @@
   padding-left: 0;
   width: 2.5rem;
   line-height: 1.3125rem;
+}
+
+.elip-button:hover {
+  background-color: #05ff56;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 85%;
+}
+
+.flag-elip {
+  display: flex;
+}
+
+.upvotes {
+  margin-right: 8px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.7125rem;
+}
+
+.downvotes {
+  margin-right: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.7125rem;
 }

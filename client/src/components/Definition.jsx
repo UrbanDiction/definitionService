@@ -43,15 +43,14 @@ class Definition extends React.Component {
           {this.state.createdDate}
         </div>
         <div className="buttonRow">
-          <div className="buttonContainer">
-            <VoteButtonContainer
-              upvotes={this.state.upVotes}
-              downvotes={this.state.downVotes}
-            />
+          <VoteButtonContainer
+            upvotes={this.state.upVotes}
+            downvotes={this.state.downVotes}
+          />
+          <div className="flag-elip">
+            <div className="flag-button">f</div>
+            <div className="elip-button">...</div>
           </div>
-          <div className="flag-button">f
-          </div>
-          <div className="elip-button">...</div>
         </div>
         <div className="tone">
           <div className="mug-text">
