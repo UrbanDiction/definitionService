@@ -13,7 +13,7 @@ class App extends React.Component {
   }
   // eslint-disable-next-line class-methods-use-this
   componentDidMount() {
-    fetch("/definition/word", {
+    fetch("http://localhost:8001/definition/word", {
       method: "POST",
       body: JSON.stringify({ word: "architecto" }),
       headers: {

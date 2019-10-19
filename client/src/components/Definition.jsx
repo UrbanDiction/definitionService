@@ -3,6 +3,7 @@ import React from "react"; // eslint-disable-line
 import VoteButtonContainer from "./VoteButtonContainer.jsx";
 import SocialMedia from "./SocialMedia.jsx";
 import FlagButton from "./FlagButton.jsx";
+import WordMugAd from "./WordMugAd.jsx"
 
 class Definition extends React.Component {
   constructor(props) {
@@ -20,10 +21,11 @@ class Definition extends React.Component {
     };
   }
   render() {
-    console.log(this.props.def_id);
+
     const hashed = this.state.hashtags
       .split(" ")
       .map(item => <span className="hash_green">{"#" + item + " "}</span>);
+
     return (
       <div className="defs">
         <div className="top-row">
@@ -55,18 +57,7 @@ class Definition extends React.Component {
             <div className="elip-button">...</div>
           </div>
         </div>
-        <div className="tone">
-          <div className="mug-text">
-            Get a <span className="mug-word">Word</span> mug for your cousin
-            Steve.
-          </div>
-          <div>
-            <img
-              className="mug-image"
-              src="https://d2gatte9o95jao.cloudfront.net/assets/mug-ad-02@2x-5e65e4fe0daf91156b197594c58445606b861fc9317ca6c02fad7b75dfb58e22.png"
-            ></img>
-          </div>
-        </div>
+        <WordMugAd />
       </div>
     );
   }

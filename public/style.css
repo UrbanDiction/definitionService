@@ -39,8 +39,8 @@
 }
 
 .author-date {
-  margin-top: 10px;
-  margin-bottom: 25px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   font-weight: bold;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
     sans-serif;
@@ -52,6 +52,7 @@
 
 .defs {
   padding-left: 32px;
+  padding-right: 32px;
   padding-top: 32px;
   width: 100%;
 }
@@ -69,9 +70,8 @@
   margin-right: -2em;
   padding-left: 2em;
   padding-right: 3em;
-  background-color: #efff00;
   height: 72px;
-  width: 100%;
+  min-width: 100%;
   padding-top: 32px;
   cursor: pointer;
 }
@@ -95,8 +95,6 @@
 }
 
 .mug-word {
-  color: #efff00;
-  background-color: black;
   padding: 1px 3px;
   font-family: "Source Sans Pro", "Helvetica Neue", Helvetica, Roboto, Arial,
     sans-serif;
@@ -172,7 +170,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: 85%;
+  width: 100%;
 }
 
 .social-media {
@@ -222,7 +220,10 @@
   padding-bottom: 0;
   padding-left: 0;
   width: 2.5rem;
-  line-height: 1.3125rem;
+  line-height: .57rem;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
 .elip-button:hover {
@@ -233,7 +234,7 @@
   display: flex;
   justify-content: space-between;
   flex-direction: row;
-  width: 85%;
+  width: 100%;
 }
 
 .flag-elip {
