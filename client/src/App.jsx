@@ -13,15 +13,14 @@ class App extends React.Component {
   }
   // eslint-disable-next-line class-methods-use-this
   componentDidMount() {
-    fetch("http://localhost:8001/definition/word", {
+    fetch("/definition/word", {
       method: "POST",
-      body: JSON.stringify({ word: "architecto" }),
+      body: JSON.stringify({ word: "atque" }),
       headers: {
         "Content-Type": "application/json"
       }
     })
       .then(data => {
-        // console.log(data);
         return data.json();
       })
       .then(({ definitionQuery }) => {

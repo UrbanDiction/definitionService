@@ -4,25 +4,13 @@ import React from "react";
 class UpvoteButton extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      upvotes: this.props.upvotes,
-      toggled: this.props.toggled
-    };
-    this.upvoteOnClick = this.upvoteOnClick.bind(this);
-  }
-  upvoteOnClick () {
-    if (this.state.toggled === "none") {
-      this.setState({toggled: "upvoted"})
-    } else if (this.state.toggled === "upvoted") {
-      this.setState({toggled: "none"})
-    }
   }
 
   render() {
     return (
       <div
-      onClick={this.upvoteOnClick}
-      className={this.state.toggled === "none" ? "upvote-wrapper" : "upvote-wrapper clicked"}>
+      onClick={() => this.props.toggleButton("upvote")}
+      className={this.props.buttonState === "upvote" ? "upvote-wrapper clicked" : "upvote-wrapper"}>
         <div className="upvote-img">
         <i>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
@@ -31,7 +19,7 @@ class UpvoteButton extends React.Component {
         </i>
         </div>
         <div className="upvotes">
-        {this.state.upvotes}
+        {this.props.upvotes}
         </div>
       </div>
     );

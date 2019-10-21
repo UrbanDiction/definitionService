@@ -10,7 +10,6 @@ class WordMugAd extends React.Component {
 
     const colors = ['#efff00', '#3BFF59', '#144FE6']
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
-    console.log(randomColor)
     const adColor = {
       backgroundColor: randomColor
     }

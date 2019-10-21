@@ -11,7 +11,7 @@ class SocialMedia extends React.Component {
       <div className="social-media">
         <div className="twitter">
           <a href="https://www.twitter.com/" target="_blank">
-            <i class="svgicon svgicon-ud_twitter">
+            <i>
               <svg className="svg-twitter" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 34">
                 <path d="M7.3 8c5.4 2.8 9.9 2.6 9.9 2.6s-1.7-6.2 3.6-8.9 9 1.9 9 1.9.9-.3 1.6-.5c.7-.3 1.7-.7 1.7-.7l-1.6 3 2.5-.3s-.3.5-1.3 1.4l-1.4 1.4s.4 7.4-3.4 13.1c-3.8 5.7-8.7 9.1-15.9 9.9C4.9 31.6.2 28.6.2 28.6s3.1-.2 5.1-1 4.9-2.8 4.9-2.8-4.1-1.3-5.5-2.7c-1.5-1.4-1.8-2.3-1.8-2.3l4-.1s-4.2-2.3-5.4-4.1S0 12.1 0 12.1l3.1 1.3S.5 9.8.2 7s.5-4.3.5-4.3S1.9 5.2 7.3 8z"></path>
               </svg>
