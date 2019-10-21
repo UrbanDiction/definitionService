@@ -11,11 +11,12 @@ class App extends React.Component {
       data: []
     };
   }
+
   // eslint-disable-next-line class-methods-use-this
   componentDidMount() {
-    fetch("/definition/word", {
+    fetch("http://localhost:8001/definition/word", {
       method: "POST",
-      body: JSON.stringify({ word: "atque" }),
+      body: JSON.stringify({ word: "test" }),
       headers: {
         "Content-Type": "application/json"
       }
@@ -25,17 +26,16 @@ class App extends React.Component {
       })
       .then(({ definitionQuery }) => {
         this.setState({ data: definitionQuery });
-      });
+      })
+      .catch(() => {
+        // handle error
+      })
   }
   // eslint-disable-next-line
   render() {
     return (
       <div>
-
-
-      <div>
         <DefinitionList data={this.state.data} />
-      </div>
       </div>
     );
   }
