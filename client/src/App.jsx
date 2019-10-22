@@ -11,12 +11,11 @@ class App extends React.Component {
       data: []
     };
   }
-
   // eslint-disable-next-line class-methods-use-this
   componentDidMount() {
     fetch("http://localhost:8001/definition/word", {
       method: "POST",
-      body: JSON.stringify({ word: "dolor" }),
+      body: JSON.stringify({ word: "repellat" }),
       headers: {
         "Content-Type": "application/json"
       }

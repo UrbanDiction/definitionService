@@ -26,7 +26,7 @@ class Definition extends React.Component {
           )}
           <SocialMedia />
         </div>
-        <div className="word_title">Word</div>
+        <div className="word_title">Repellat</div>
         <p className="single_def">{this.props.data.definition}</p>
         <p className="example">{this.props.data.example}</p>
         <div className="hash">{hashed}</div>

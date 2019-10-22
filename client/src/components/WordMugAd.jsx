@@ -31,7 +31,7 @@ class WordMugAd extends React.Component {
         <div className="mug-text" style={textColor}>
           Get a{" "}
           <span className="mug-word" style={wordColor}>
-            Word
+            Repellat
           </span>{" "}
           mug for your cousin Steve.
         </div>
