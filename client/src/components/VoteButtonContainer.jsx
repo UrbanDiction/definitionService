@@ -19,7 +19,8 @@ class VoteButtonContainer extends React.Component {
       return;
     }
     if (this.state.buttonToggle != "none") {
-      let newUpvotes = this.state.upvotes, newDownvotes = this.state.downvotes;
+      let newUpvotes = this.state.upvotes;
+      let newDownvotes = this.state.downvotes;
       if (button === "upvote") {
         newDownvotes = this.state.downvotes - 1;
         newUpvotes = this.state.upvotes + 1;
@@ -27,16 +28,24 @@ class VoteButtonContainer extends React.Component {
         newDownvotes = this.state.downvotes + 1;
         newUpvotes = this.state.upvotes - 1;
       }
-      this.setState({buttonToggle: button, upvotes: newUpvotes, downvotes: newDownvotes})
+      this.setState({
+        buttonToggle: button,
+        upvotes: newUpvotes,
+        downvotes: newDownvotes
+      });
     } else {
-      let newUpvotes = this.state.upvotes, newDownvotes = this.state.downvotes;
+      let newUpvotes = this.state.upvotes;
+      let newDownvotes = this.state.downvotes;
       if (button === "upvote") {
         newUpvotes = this.state.upvotes + 1;
       } else {
         newDownvotes = this.state.downvotes + 1;
       }
-      this.setState({buttonToggle: button, upvotes: newUpvotes, downvotes: newDownvotes})
-
+      this.setState({
+        buttonToggle: button,
+        upvotes: newUpvotes,
+        downvotes: newDownvotes
+      });
     }
   }
 
