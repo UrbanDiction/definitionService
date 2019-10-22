@@ -207,6 +207,7 @@
 
 .flag-button:hover {
   background-color: #05ff56;
+  cursor: pointer;
 }
 
 .elip-button {
@@ -220,10 +221,11 @@
   padding-bottom: 0;
   padding-left: 0;
   width: 2.5rem;
-  line-height: .57rem;
-    font-size: 24px;
-    font-weight: bold;
-    letter-spacing: 1px;
+  line-height: 0.57rem;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
 }
 
 .elip-button:hover {
