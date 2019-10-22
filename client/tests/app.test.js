@@ -20,10 +20,7 @@ describe("First React component test with Enzyme", () => {
   });
 });
 
-
-
 test('Definition component renders text of definition', () => {
-
   const testData = {
     created_by: "Nick",
     created_date: "2017-08-02",
@@ -38,9 +35,7 @@ test('Definition component renders text of definition', () => {
   const wrapper = mount(
     <Definition data={testData} />
   );
-
   const p = wrapper.find('.single_def');
-
   expect(p.text()).toBe("test def")
 })
 
@@ -74,52 +69,7 @@ test('DefnitionList mapping function maps definitions to module', () => {
   const wrapper = mount(
     <DefinitionList data={testData.definitionQuery} />
   );
-
-
 })
-
-// describe('VoteButtonContainer component renders the buttons correctly', () => {
-//   it('renders correctly', () => {
-//     const defData = {
-//       created_by: "Nick",
-//       created_date: "2017-08-02",
-//       definition: "test def",
-//       downvotes: 1,
-//       example: "test example",
-//       hash_tags: "test",
-//       id: 1,
-//       upvotes: 1,
-//       word_id: 1
-//     }
-//     const rendered = renderer.create(
-//       <VoteButtonContainer upvotes={defData.upvotes} downvotes={defData.downvotes} />
-//     );
-//     expect(rendered.toJSON()).toMatchSnapshot();
-//   });
-// });
-
-// test('Definition component renders text of definition creator', () => {
-//   const testData = {
-//     created_by: "Nick",
-//     created_date: "2017-08-02",
-//     definition: "test def",
-//     downvotes: 1,
-//     example: "test example",
-//     hash_tags: "test",
-//     id: 1,
-//     upvotes: 1,
-//     word_id: 1
-//   }
-//   const wrapper = mount(
-//     <Definition data={testData} />
-//   );
-
-//   const p = wrapper.find('.author');
-
-//   expect(p.text()).toBe("Nick")
-// })
-
-
 
 test('VoteButtonContainer toggles buttonToggle property when vote button is clicked', () => {
   const toggleButton = jest.fn();
@@ -134,10 +84,6 @@ test('VoteButtonContainer toggles buttonToggle property when vote button is clic
     upvotes: 1,
     word_id: 1
   }
-  //  const rendered = renderer.create(
-  //    <VoteButtonContainer data={testData}  />
-  //  );
-
   const wrapper = mount(
     <Definition data={testData} toggleButton={toggleButton} />
   );
@@ -147,26 +93,6 @@ test('VoteButtonContainer toggles buttonToggle property when vote button is clic
   p.simulate('click')
   p.simulate('click')
 })
-
-// test('VoteButtonContainer component renders number of upvotes', () => {
-//   const testData = {
-//     created_by: "Nick",
-//     created_date: "2017-08-02",
-//     definition: "test def",
-//     downvotes: 1,
-//     example: "test example",
-//     hash_tags: "test",
-//     id: 1,
-//     upvotes: 1,
-//     word_id: 1
-//   }
-//   const wrapper = mount(
-//     <UpvoteButton data={testData} />
-//   );
-
-//   const div = wrapper.find('.upvotes');
-//   expect(div.text()).to.equal(1)
-// })
 
 
 
