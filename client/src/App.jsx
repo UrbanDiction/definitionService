@@ -16,7 +16,7 @@ class App extends React.Component {
   componentDidMount() {
     fetch("http://localhost:8001/definition/word", {
       method: "POST",
-      body: JSON.stringify({ word: "test" }),
+      body: JSON.stringify({ word: "dolor" }),
       headers: {
         "Content-Type": "application/json"
       }
