@@ -7,6 +7,7 @@ import App from "../src/App.jsx";
 import Definition from "../src/components/Definition.jsx"
 import VoteButtonContainer from "../src/components/VoteButtonContainer.jsx"
 import UpvoteButton from "../src/components/UpvoteButton.jsx"
+import DefinitionList from "../src/components/DefinitionList.jsx"
 
 it("works", () => {
   expect(App).toEqual(App);
@@ -14,14 +15,15 @@ it("works", () => {
 
 describe("First React component test with Enzyme", () => {
   it("renders without crashing", () => {
-  const app = shallow(<App />);
-  expect(app).toEqual(shallow(<App />))
+    const app = shallow(<App />);
+    expect(app).toEqual(shallow(<App />))
   });
 });
 
 
 
 test('Definition component renders text of definition', () => {
+
   const testData = {
     created_by: "Nick",
     created_date: "2017-08-02",
@@ -40,6 +42,40 @@ test('Definition component renders text of definition', () => {
   const p = wrapper.find('.single_def');
 
   expect(p.text()).toBe("test def")
+})
+
+test('DefnitionList mapping function maps definitions to module', () => {
+  const testData = {
+    "definitionQuery": [
+      {
+        "id": 1,
+        "definition": "test def",
+        "example": "test example",
+        "hash_tags": "test",
+        "created_date": "2017-08-02",
+        "created_by": "Nick",
+        "upvotes": 1,
+        "downvotes": 1,
+        "word_id": 1
+      },
+      {
+        "id": 2,
+        "definition": "test def",
+        "example": "test example",
+        "hash_tags": "test",
+        "created_date": "2017-08-02",
+        "created_by": "Nick",
+        "upvotes": 1,
+        "downvotes": 1,
+        "word_id": 1
+      }
+    ]
+  }
+  const wrapper = mount(
+    <DefinitionList data={testData.definitionQuery} />
+  );
+
+
 })
 
 // describe('VoteButtonContainer component renders the buttons correctly', () => {
@@ -108,6 +144,7 @@ test('VoteButtonContainer toggles buttonToggle property when vote button is clic
   let p = wrapper.find('UpvoteButton');
   p.simulate('click')
   p = wrapper.find('DownvoteButton')
+  p.simulate('click')
   p.simulate('click')
 })
 
