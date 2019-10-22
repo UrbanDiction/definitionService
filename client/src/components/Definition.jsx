@@ -3,28 +3,18 @@ import React from "react"; // eslint-disable-line
 import VoteButtonContainer from "./VoteButtonContainer.jsx";
 import SocialMedia from "./SocialMedia.jsx";
 import FlagButton from "./FlagButton.jsx";
-import WordMugAd from "./WordMugAd.jsx"
+import WordMugAd from "./WordMugAd.jsx";
 
 class Definition extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      createdBy: this.props.data.created_by,
-      createdDate: this.props.data.created_date,
-      definition: this.props.data.definition,
-      example: this.props.data.example,
-      upVotes: this.props.data.upvotes,
-      downVotes: this.props.data.downvotes,
-      hashtags: this.props.data.hash_tags,
-      id: this.props.data.id,
-      word_id: this.props.data.word_id
-    };
   }
   render() {
-
-    const hashed = this.state.hashtags
-      .split(" ")
-      .map(item => <span className="hash_green">{"#" + item + " "}</span>);
+    const hashed = this.props.data.hash_tags.split(" ").map((item, key) => (
+      <span key={key} className="hash_green">
+        {"#" + item + " "}
+      </span>
+    ));
 
     return (
       <div className="defs">
@@ -37,18 +27,17 @@ class Definition extends React.Component {
           <SocialMedia />
         </div>
         <div className="word_title">Word</div>
-        <p className="single_def">{this.state.definition}</p>
-        <p className="example">{this.state.example}</p>
+        <p className="single_def">{this.props.data.definition}</p>
+        <p className="example">{this.props.data.example}</p>
         <div className="hash">{hashed}</div>
-
         <div className="author-date">
-          by <span className="author">{this.state.createdBy}</span>{" "}
-          {this.state.createdDate}
+          by <span className="author">{this.props.data.created_by}</span>{" "}
+          {this.props.data.created_date}
         </div>
         <div className="buttonRow">
           <VoteButtonContainer
-            upvotes={this.state.upVotes}
-            downvotes={this.state.downVotes}
+            upvotes={this.props.data.upvotes}
+            downvotes={this.props.data.downvotes}
           />
           <div className="flag-elip">
             <div className="flag-button">
