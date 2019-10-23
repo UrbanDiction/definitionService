@@ -26,8 +26,10 @@ class WordMugAd extends React.Component {
       textColor.color = "white";
     }
 
-    const relations = ["cousin Steve", "uncle Ted", "aunt Marcie", "nephew Paulie", "mama Susan", "half-brother Doug", "accountant Judy", "buddy Frank", "dog Tony", "bunkmate Abdul", "barber Jeff", "best friend Tammy", "ferret Jim"]
+    const relations = ["cousin", "uncle", "aunt", "nephew", "mama", "half-brother", "accountant", "buddy", "dog", "bunkmate", "barber", "best friend", "ferret"];
+    const names = ["Steve", "Ted", "Marcie", "Paulie", "Susan", "Doug", "Judy", "Frank", "Tony", "Abdul", "Jeff", "Tammy", "Jim"];
     const randomRelation = relations[Math.floor(Math.random() * relations.length)];
+    const randomName = names[Math.floor(Math.random() * relations.length)];
 
     return (
       <div className="tone" style={adColor}>
@@ -36,7 +38,7 @@ class WordMugAd extends React.Component {
           <span className="mug-word" style={wordColor}>
             Repellat
           </span>{" "}
-          mug for your {randomRelation}.
+          mug for your {randomRelation} {randomName}.
         </div>
         <div className="mug">
           <img
