@@ -26,10 +26,10 @@ class WordMugAd extends React.Component {
       textColor.color = "white";
     }
 
-    const relations = ["cousin", "uncle", "aunt", "nephew", "mama", "half-brother", "accountant", "buddy", "dog", "bunkmate", "barber", "best friend", "ferret"];
-    const names = ["Steve", "Ted", "Marcie", "Paulie", "Susan", "Doug", "Judy", "Frank", "Tony", "Abdul", "Jeff", "Tammy", "Jim"];
+    const relations = ["cousin", "uncle", "aunt", "nephew", "mama", "half-brother", "accountant", "buddy", "dog", "bunkmate", "barber", "best friend", "ferret", "priest"];
+    const names = ["Steve", "Ted", "Marcie", "Paulie", "Susan", "Doug", "Judy", "Frank", "Tony", "Abdul", "Jeff", "Tammy", "Jim", "Julio", "Juan", "Vlad", "Helen", "Rebecca", "Jessie"];
     const randomRelation = relations[Math.floor(Math.random() * relations.length)];
-    const randomName = names[Math.floor(Math.random() * relations.length)];
+    const randomName = names[Math.floor(Math.random() * names.length)];
 
     return (
       <div className="tone" style={adColor}>
