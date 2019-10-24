@@ -17,6 +17,6 @@ require("./config/routes.js")(app);
 app.listen(port, () => {
   if (processArgs.includes("development")) {
     // eslint-disable-next-line
-    console.log("Listening on", port);
+    console.log("Listening on: ", port);
   }
 });
