@@ -18,7 +18,7 @@ app.get("/:word", (req, res) => {
       res.status(500).json({ error })
     } else {
       const reactString = ReactDOM.renderToString(< App data={wordData} />)
-      res.send(JSON.stringify(reactString))
+      res.send(reactString)
     }
   })
 });

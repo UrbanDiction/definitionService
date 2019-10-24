@@ -39,37 +39,6 @@ test('Definition component renders text of definition', () => {
   expect(p.text()).toBe("test def")
 })
 
-test('DefnitionList mapping function maps definitions to module', () => {
-  const testData = {
-    "definitionQuery": [
-      {
-        "id": 1,
-        "definition": "test def",
-        "example": "test example",
-        "hash_tags": "test",
-        "created_date": "2017-08-02",
-        "created_by": "Nick",
-        "upvotes": 1,
-        "downvotes": 1,
-        "word_id": 1
-      },
-      {
-        "id": 2,
-        "definition": "test def",
-        "example": "test example",
-        "hash_tags": "test",
-        "created_date": "2017-08-02",
-        "created_by": "Nick",
-        "upvotes": 1,
-        "downvotes": 1,
-        "word_id": 1
-      }
-    ]
-  }
-  const wrapper = mount(
-    <DefinitionList data={testData.definitionQuery} />
-  );
-})
 
 test('VoteButtonContainer toggles buttonToggle property when vote button is clicked', () => {
   const toggleButton = jest.fn();
