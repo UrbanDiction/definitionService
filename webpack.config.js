@@ -1,41 +1,49 @@
 const path = require("path");
-const nodeExternals = require("webpack-node-externals");
 
 const SRC_DIR = path.join(__dirname, "/client/src");
 const DIST_DIR = path.join(__dirname, "/public");
+
+const nodeExternals = require("webpack-node-externals");
 
 const js = {
   test: /\.js$/,
   exclude: /node_modules/,
   use: {
-    loader: 'babel-loader',
+    loader: "babel-loader",
     options: {
-      presets: ['react', '@babel/preset-env'],
-      plugins: ['transform-class-properties']
+      presets: ["@babel/preset-react"],
+      plugins: ["transform-class-properties"]
     }
   }
-}
-
+};
+const jsx = {
+  test: /\.jsx?/,
+  loader: "babel-loader",
+  options: {
+    presets: ["@babel/preset-env", "@babel/preset-react"]
+  }
+};
 const serverConfig = {
-  mode: 'development',
-  target: 'node',
+  mode: "development",
   node: {
     __dirname: false
   },
   externals: [nodeExternals()],
   entry: {
-    'server.js': path.resolve(__dirname, './server/server.js')
+    "index.js": path.resolve(__dirname, "server/server.js")
   },
   module: {
-    rules: [js]
+    rules: [js, jsx]
   },
   output: {
-    path: path.resolve(__dirname, 'dist'),
-    filename: '[name]'
+    path: path.resolve(__dirname, "dist"),
+    filename: "[name]"
   }
-}
+};
 
 const clientConfig = {
+  mode: "development",
+  target: "web",
   entry: `${SRC_DIR}/index.jsx`,
   output: {
     filename: "bundle.js",
@@ -56,6 +64,6 @@ const clientConfig = {
       }
     ]
   }
-}
+};
 
-module.exports = [serverConfig, clientConfig];
+module.exports = [serverConfig];
