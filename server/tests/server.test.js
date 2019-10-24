@@ -28,7 +28,7 @@ describe("Server tests", () => {
                                     () => {
                                       connection.query(
                                         `INSERT INTO visits(date, word_id) VALUES('2012-07-01', 1)`,
-                                        done()
+                                        done
                                       );
                                     }
                                   );
