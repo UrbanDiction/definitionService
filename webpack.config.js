@@ -3,7 +3,6 @@ const path = require("path");
 const SRC_DIR = path.join(__dirname, "/client/src");
 const DIST_DIR = path.join(__dirname, "/public");
 
-//const transformClassProperties = require ("babel-plugin-transform-class-properties");
 const nodeExternals = require("webpack-node-externals");
 
 const js = {
@@ -12,7 +11,7 @@ const js = {
   use: {
     loader: "babel-loader",
     options: {
-      presets: ["@babel/preset-react"],
+      presets: ["@babel/preset-react"]
     }
   }
 };
@@ -45,7 +44,7 @@ const clientConfig = {
   mode: "development",
   target: "web",
   entry: {
-    app: `${SRC_DIR}/index.jsx`,
+    app: `${SRC_DIR}/index.jsx`
   },
   output: {
     filename: "bundle.js",
