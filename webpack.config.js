@@ -46,7 +46,6 @@ const clientConfig = {
   target: "web",
   entry: {
     app: `${SRC_DIR}/index.jsx`,
-    css: path.resolve(__dirname, './public/style.css')
   },
   output: {
     filename: "bundle.js",

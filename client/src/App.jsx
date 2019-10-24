@@ -8,33 +8,16 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: []
+      data: this.props.data
     };
   }
   // eslint-disable-next-line class-methods-use-this
-  componentDidMount() {
-    fetch("http://localhost:8001/definition/word", {
-      method: "POST",
-      body: JSON.stringify({ word: "repellat" }),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    })
-      .then(data => {
-        return data.json();
-      })
-      .then(({ definitionQuery }) => {
-        this.setState({ data: definitionQuery });
-      })
-      .catch(() => {
-        // handle error
-      })
-  }
+
   // eslint-disable-next-line
   render() {
     return (
-      <div>
-        <DefinitionList data={this.state.data} />
+      <div id="definitionData" initialDefinitionData={JSON.stringify(this.props.data)} >
+        <DefinitionList data={this.props.data} />
       </div>
     );
   }
