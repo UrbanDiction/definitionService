@@ -16,7 +16,7 @@ class App extends React.Component {
   // eslint-disable-next-line
   render() {
     return (
-      <div id="definitionData" initialDefinitionData={JSON.stringify(this.props.data)} >
+      <div id="definitionData" initialdefinitiondata={JSON.stringify(this.props.data)} >
         <DefinitionList data={this.props.data} />
       </div>
     );

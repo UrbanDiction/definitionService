@@ -18,6 +18,9 @@ const queryWordData = (word, callback) => {
           if (error2) {
             return callback(error2, null);
           }
+          for (let i = 0; i < definitionQuery.length; i++) {
+            definitionQuery[i].word = connection.escape(word)
+          }
           return callback(null, { definitionQuery });
         }
       );

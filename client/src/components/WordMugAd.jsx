@@ -2,8 +2,8 @@
 import React from "react";
 
 class WordMugAd extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
   }
 
   render() {
@@ -36,7 +36,7 @@ class WordMugAd extends React.Component {
         <div className="mug-text" style={textColor}>
           Get a{" "}
           <span className="mug-word" style={wordColor}>
-            Repellat
+            {this.props.word}
           </span>{" "}
           mug for your {randomRelation} {randomName}.
         </div>
