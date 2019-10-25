@@ -10,7 +10,7 @@ class WordMugAd extends React.Component {
       textColor: {},
       randomRelation: "",
       randomName: ""
-    }
+    };
   }
 
   componentDidMount() {
@@ -33,17 +33,57 @@ class WordMugAd extends React.Component {
       textColor.color = "white";
     }
 
-    const relations = ["cousin", "uncle", "aunt", "nephew", "mama", "half-brother", "accountant", "buddy", "dog", "bunkmate", "barber", "best friend", "ferret", "priest"];
-    const names = ["Steve", "Ted", "Marcie", "Paulie", "Susan", "Doug", "Judy", "Frank", "Tony", "Abdul", "Jeff", "Tammy", "Jim", "Julio", "Juan", "Vlad", "Helen", "Rebecca", "Jessie"];
-    const randomRelation = relations[Math.floor(Math.random() * relations.length)];
+    const relations = [
+      "cousin",
+      "uncle",
+      "aunt",
+      "nephew",
+      "mama",
+      "half-brother",
+      "accountant",
+      "buddy",
+      "dog",
+      "bunkmate",
+      "barber",
+      "best friend",
+      "ferret",
+      "priest"
+    ];
+    const names = [
+      "Steve",
+      "Ted",
+      "Marcie",
+      "Paulie",
+      "Susan",
+      "Doug",
+      "Judy",
+      "Frank",
+      "Tony",
+      "Abdul",
+      "Jeff",
+      "Tammy",
+      "Jim",
+      "Julio",
+      "Juan",
+      "Vlad",
+      "Helen",
+      "Rebecca",
+      "Jessie"
+    ];
+    const randomRelation =
+      relations[Math.floor(Math.random() * relations.length)];
     const randomName = names[Math.floor(Math.random() * names.length)];
 
-    this.setState({ wordColor, adColor, textColor, randomRelation, randomName })
+    this.setState({
+      wordColor,
+      adColor,
+      textColor,
+      randomRelation,
+      randomName
+    });
   }
 
   render() {
-
-
     return (
       <div className="tone" style={this.state.adColor}>
         <div className="mug-text" style={this.state.textColor}>
