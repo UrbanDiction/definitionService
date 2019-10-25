@@ -30,7 +30,8 @@ test('Definition component renders text of definition', () => {
     hash_tags: "test",
     id: 1,
     upvotes: 1,
-    word_id: 1
+    word_id: 1,
+    word: "test"
   }
   const wrapper = mount(
     <Definition data={testData} />
@@ -51,7 +52,8 @@ test('VoteButtonContainer toggles buttonToggle property when vote button is clic
     hash_tags: "test",
     id: 1,
     upvotes: 1,
-    word_id: 1
+    word_id: 1,
+    word: "test"
   }
   const wrapper = mount(
     <Definition data={testData} toggleButton={toggleButton} />
