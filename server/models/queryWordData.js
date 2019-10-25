@@ -1,6 +1,6 @@
 const connection = require("../db/connection.js");
 
-const queryWordData = ({ word }, callback) => {
+const queryWordData = (word, callback) => {
   connection.query(
     `SELECT id FROM words where word = ${connection.escape(word)}`,
     // eslint-disable-next-line consistent-return
@@ -18,15 +18,7 @@ const queryWordData = ({ word }, callback) => {
           if (error2) {
             return callback(error2, null);
           }
-          connection.query(
-            `SELECT date FROM visits WHERE word_id = ${wordQuery[0].id}`,
-            (error3, visitsQuery) => {
-              if (error3) {
-                return callback(error3, null);
-              }
-              return callback(null, { definitionQuery, visitsQuery });
-            }
-          );
+          return callback(null, { definitionQuery });
         }
       );
     }
