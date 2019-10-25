@@ -8,7 +8,7 @@ ReactDOM.hydrate(
     data={JSON.parse(
       document
         .getElementById("definitionData")
-        .getAttribute("initialDefinitionData")
+        .getAttribute("initialdefinitiondata")
     )}
   />,
   document.getElementById("definitionApp")

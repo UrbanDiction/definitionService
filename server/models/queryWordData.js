@@ -1,3 +1,4 @@
+/* eslint-disable */
 const connection = require("../db/connection.js");
 
 const queryWordData = (word, callback) => {
@@ -17,6 +18,9 @@ const queryWordData = (word, callback) => {
         (error2, definitionQuery) => {
           if (error2) {
             return callback(error2, null);
+          }
+          for (let i = 0; i < definitionQuery.length; i += 1) {
+            definitionQuery[i].word = connection.escape(word);
           }
           return callback(null, { definitionQuery });
         }

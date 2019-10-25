@@ -26,7 +26,7 @@ class Definition extends React.Component {
           )}
           <SocialMedia />
         </div>
-        <div className="word_title">Repellat</div>
+        <div className="word_title">{this.props.data.word.slice(1, this.props.data.word.length -1)}</div>
         <p className="single_def">{this.props.data.definition}</p>
         <p className="example">{this.props.data.example}</p>
         <div className="hash">{hashed}</div>
@@ -46,7 +46,7 @@ class Definition extends React.Component {
             <div className="elip-button">...</div>
           </div>
         </div>
-        <WordMugAd />
+        <WordMugAd word={this.props.data.word.slice(1, this.props.data.word.length -1)}/>
       </div>
     );
   }
