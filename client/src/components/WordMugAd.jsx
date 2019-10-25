@@ -4,9 +4,16 @@ import React from "react";
 class WordMugAd extends React.Component {
   constructor(props) {
     super(props);
+    this.state = {
+      wordColor: {},
+      adColor: {},
+      textColor: {},
+      randomRelation: "",
+      randomName: ""
+    };
   }
 
-  render() {
+  componentDidMount() {
     const colors = ["#efff00", "#3BFF59", "#144FE6"];
     const randomColor = colors[Math.floor(Math.random() * colors.length)];
     const adColor = {
@@ -26,19 +33,65 @@ class WordMugAd extends React.Component {
       textColor.color = "white";
     }
 
-    const relations = ["cousin", "uncle", "aunt", "nephew", "mama", "half-brother", "accountant", "buddy", "dog", "bunkmate", "barber", "best friend", "ferret", "priest"];
-    const names = ["Steve", "Ted", "Marcie", "Paulie", "Susan", "Doug", "Judy", "Frank", "Tony", "Abdul", "Jeff", "Tammy", "Jim", "Julio", "Juan", "Vlad", "Helen", "Rebecca", "Jessie"];
-    const randomRelation = relations[Math.floor(Math.random() * relations.length)];
+    const relations = [
+      "cousin",
+      "uncle",
+      "aunt",
+      "nephew",
+      "mama",
+      "half-brother",
+      "accountant",
+      "buddy",
+      "dog",
+      "bunkmate",
+      "barber",
+      "best friend",
+      "ferret",
+      "priest"
+    ];
+    const names = [
+      "Steve",
+      "Ted",
+      "Marcie",
+      "Paulie",
+      "Susan",
+      "Doug",
+      "Judy",
+      "Frank",
+      "Tony",
+      "Abdul",
+      "Jeff",
+      "Tammy",
+      "Jim",
+      "Julio",
+      "Juan",
+      "Vlad",
+      "Helen",
+      "Rebecca",
+      "Jessie"
+    ];
+    const randomRelation =
+      relations[Math.floor(Math.random() * relations.length)];
     const randomName = names[Math.floor(Math.random() * names.length)];
 
+    this.setState({
+      wordColor,
+      adColor,
+      textColor,
+      randomRelation,
+      randomName
+    });
+  }
+
+  render() {
     return (
-      <div className="tone" style={adColor}>
-        <div className="mug-text" style={textColor}>
+      <div className="tone" style={this.state.adColor}>
+        <div className="mug-text" style={this.state.textColor}>
           Get a{" "}
-          <span className="mug-word" style={wordColor}>
+          <span className="mug-word" style={this.state.wordColor}>
             {this.props.word}
           </span>{" "}
-          mug for your {randomRelation} {randomName}.
+          mug for your {this.state.randomRelation} {this.state.randomName}.
         </div>
         <div className="mug">
           <img
