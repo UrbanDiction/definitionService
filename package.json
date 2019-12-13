@@ -8,15 +8,16 @@
     "node": ">=6.13.0"
   },
   "scripts": {
-    "react:dev": "webpack -d --watch",
+    "webpack": "webpack -d --watch",
     "test": "jest",
     "server:dev": "nodemon ./server/server.js development",
-    "start": "node ./server/server.js",
-    "create:db": "mysql -u root < ./server/db/schema.sql"
+    "start": "node ./dist/index.js",
+    "generate:db": "node ./server/db/generate_seed_data.js",
+    "seed:db": "mysql -u root < ./server/db/seed_data.sql",
+    "reset:db": "mysql -u root < ./server/db/schema.sql"
   },
   "dependencies": {
     "babel-preset-es2015": "^6.24.1",
-    "body-parser": "^1.19.0",
     "bootstrap": "^4.3.1",
     "bootswatch": "^4.3.1",
     "enzyme": "^3.10.0",
